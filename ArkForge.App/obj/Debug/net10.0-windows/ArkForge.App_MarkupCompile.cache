@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\isaac\OneDrive\Escritorio\ARKFORGE\ArkForge\ArkForge.App\obj\Debug\net10.0-windows\
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.App\obj\Debug\net10.0-windows\
 ArkForge.App
 none
 false
 TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\isaac\OneDrive\Escritorio\ARKFORGE\ArkForge\ArkForge.App\App.xaml
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.App\App.xaml
 91459975593
 
 19-1009138430
-242160034555
+242-520293936
 ShellView.xaml;Themes\DarkTheme.xaml;Views\BackupView.xaml;Views\ConfigurationView.xaml;Views\ConsoleView.xaml;Views\DashboardView.xaml;Views\ModsView.xaml;Views\ServerView.xaml;Views\SettingsView.xaml;
 
 False

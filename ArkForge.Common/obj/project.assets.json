@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.Common\\ArkForge.Common.csproj",
+      "projectUniqueName": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Common\\ArkForge.Common.csproj",
       "projectName": "ArkForge.Common",
-      "projectPath": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.Common\\ArkForge.Common.csproj",
+      "projectPath": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Common\\ArkForge.Common.csproj",
       "packagesPath": "C:\\Users\\isaac\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.Common\\obj\\",
+      "outputPath": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

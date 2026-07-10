@@ -10,3 +10,15 @@ C:\Users\isaac\OneDrive\Escritorio\ARKFORGE\ArkForge\ArkForge.Configuration\obj\
 C:\Users\isaac\OneDrive\Escritorio\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\refint\ArkForge.Configuration.dll
 C:\Users\isaac\OneDrive\Escritorio\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\ArkForge.Configuration.pdb
 C:\Users\isaac\OneDrive\Escritorio\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\ref\ArkForge.Configuration.dll
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\bin\Debug\net10.0\ArkForge.Configuration.deps.json
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\bin\Debug\net10.0\ArkForge.Configuration.dll
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\bin\Debug\net10.0\ArkForge.Configuration.pdb
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\ArkForge.Configuration.GeneratedMSBuildEditorConfig.editorconfig
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\ArkForge.Configuration.AssemblyInfoInputs.cache
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\ArkForge.Configuration.AssemblyInfo.cs
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\ArkForge.Configuration.csproj.CoreCompileInputs.cache
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\ArkForge.Configuration.sourcelink.json
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\ArkForge.Configuration.dll
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\refint\ArkForge.Configuration.dll
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\ArkForge.Configuration.pdb
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\ref\ArkForge.Configuration.dll
