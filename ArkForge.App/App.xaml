@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:ArkForge.App"
              xmlns:vm="clr-namespace:ArkForge.App.ViewModels"
              xmlns:views="clr-namespace:ArkForge.App.Views"
+             xmlns:services="clr-namespace:ArkForge.App.Services"
              StartupUri="ShellView.xaml">
     <Application.Resources>
         <ResourceDictionary>
@@ -11,6 +12,8 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Themes/DarkTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            
+            <services:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
 
             <DataTemplate DataType="{x:Type vm:DashboardViewModel}">
                 <views:DashboardView />

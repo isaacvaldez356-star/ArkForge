@@ -31,21 +31,14 @@
       "ArkForge.Configuration/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "ArkForge.Common": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ArkForge.Configuration.dll": {}
         },
         "runtime": {
           "bin/placeholder/ArkForge.Configuration.dll": {}
-        }
-      },
-      "ArkForge.Server/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "compile": {
-          "bin/placeholder/ArkForge.Server.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ArkForge.Server.dll": {}
         }
       }
     }
@@ -100,18 +93,12 @@
       "type": "project",
       "path": "../ArkForge.Configuration/ArkForge.Configuration.csproj",
       "msbuildProject": "../ArkForge.Configuration/ArkForge.Configuration.csproj"
-    },
-    "ArkForge.Server/1.0.0": {
-      "type": "project",
-      "path": "../ArkForge.Server/ArkForge.Server.csproj",
-      "msbuildProject": "../ArkForge.Server/ArkForge.Server.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "ArkForge.Common >= 1.0.0",
       "ArkForge.Configuration >= 1.0.0",
-      "ArkForge.Server >= 1.0.0",
       "CommunityToolkit.Mvvm >= 8.4.2"
     ]
   },
@@ -154,9 +141,6 @@
             },
             "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Configuration\\ArkForge.Configuration.csproj": {
               "projectPath": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Configuration\\ArkForge.Configuration.csproj"
-            },
-            "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Server\\ArkForge.Server.csproj": {
-              "projectPath": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Server\\ArkForge.Server.csproj"
             }
           }
         }

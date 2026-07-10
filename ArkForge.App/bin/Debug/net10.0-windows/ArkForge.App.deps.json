@@ -446,6 +446,9 @@
         }
       },
       "ArkForge.Configuration/1.0.0": {
+        "dependencies": {
+          "ArkForge.Common": "1.0.0"
+        },
         "runtime": {
           "ArkForge.Configuration.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -457,7 +460,6 @@
         "dependencies": {
           "ArkForge.Common": "1.0.0",
           "ArkForge.Configuration": "1.0.0",
-          "ArkForge.Server": "1.0.0",
           "CommunityToolkit.Mvvm": "8.4.2"
         },
         "runtime": {
@@ -468,6 +470,10 @@
         }
       },
       "ArkForge.Server/1.0.0": {
+        "dependencies": {
+          "ArkForge.Common": "1.0.0",
+          "ArkForge.Core": "1.0.0"
+        },
         "runtime": {
           "ArkForge.Server.dll": {
             "assemblyVersion": "1.0.0.0",

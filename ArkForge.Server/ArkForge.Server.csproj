@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ArkForge.Common\ArkForge.Common.csproj" />
+    <ProjectReference Include="..\ArkForge.Core\ArkForge.Core.csproj" />
+  </ItemGroup>
+
 </Project>

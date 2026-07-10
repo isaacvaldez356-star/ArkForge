@@ -676,6 +676,9 @@
       "ArkForge.Configuration/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "ArkForge.Common": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ArkForge.Configuration.dll": {}
         },
@@ -689,7 +692,6 @@
         "dependencies": {
           "ArkForge.Common": "1.0.0",
           "ArkForge.Configuration": "1.0.0",
-          "ArkForge.Server": "1.0.0",
           "CommunityToolkit.Mvvm": "8.4.2"
         },
         "compile": {
@@ -702,6 +704,10 @@
       "ArkForge.Server/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "ArkForge.Common": "1.0.0",
+          "ArkForge.Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ArkForge.Server.dll": {}
         },

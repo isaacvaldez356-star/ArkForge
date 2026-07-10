@@ -3,10 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ArkForge.App.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock Text="Servidor" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-    </Grid>
+
+    <StackPanel Margin="20">
+
+        <TextBlock Text="Servidor" FontSize="24" FontWeight="Bold" 
+                   Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,20"/>
+
+        <TextBlock Text="{Binding StatusText}" FontSize="16" 
+                   Foreground="{StaticResource TextSecondaryBrush}" Margin="0,0,0,20"/>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+            <Button Content="Instalar servidor" Command="{Binding InstallCommand}" 
+                    Padding="15,8" Margin="0,0,10,0" 
+                    Background="{StaticResource PrimaryBrush}" Foreground="White" BorderThickness="0"/>
+
+            <Button Content="Iniciar" Command="{Binding StartCommand}" 
+                    Padding="15,8" Margin="0,0,10,0"
+                    Background="{StaticResource SuccessBrush}" Foreground="White" BorderThickness="0"/>
+
+            <Button Content="Detener" Command="{Binding StopCommand}" 
+                    Padding="15,8"
+                    Background="{StaticResource DangerBrush}" Foreground="White" BorderThickness="0"/>
+        </StackPanel>
+
+        <TextBlock Text="Progreso de instalación:" 
+                    Foreground="{StaticResource TextSecondaryBrush}"
+                    Visibility="{Binding IsInstalling, Converter={StaticResource BoolToVisibilityConverter}}"
+                    Margin="0,0,0,5"/>
+
+        <ProgressBar Value="{Binding InstallProgress}" Minimum="0" Maximum="100" 
+                     Height="20" Width="300" HorizontalAlignment="Left"
+                     Visibility="{Binding IsInstalling, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+    </StackPanel>
 </UserControl>

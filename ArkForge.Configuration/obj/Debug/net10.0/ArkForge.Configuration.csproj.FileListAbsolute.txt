@@ -22,3 +22,7 @@ C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\ArkForge
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\refint\ArkForge.Configuration.dll
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\ArkForge.Configuration.pdb
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\ref\ArkForge.Configuration.dll
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\bin\Debug\net10.0\ArkForge.Common.dll
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\bin\Debug\net10.0\ArkForge.Common.pdb
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\ArkForge.Configuration.csproj.AssemblyReference.cache
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Configuration\obj\Debug\net10.0\ArkForge.909B7F77.Up2Date

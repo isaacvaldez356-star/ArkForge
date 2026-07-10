@@ -1,11 +1,30 @@
 {
   "version": 4,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "ArkForge.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/ArkForge.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ArkForge.Common.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ArkForge.Common/1.0.0": {
+      "type": "project",
+      "path": "../ArkForge.Common/ArkForge.Common.csproj",
+      "msbuildProject": "../ArkForge.Common/ArkForge.Common.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "ArkForge.Common >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\isaac\\.nuget\\packages\\": {},
@@ -40,7 +59,11 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Common\\ArkForge.Common.csproj": {
+              "projectPath": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Common\\ArkForge.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

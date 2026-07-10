@@ -23,10 +23,8 @@ C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Core\bin\Debug\net10.0\ArkForge.Core.dll
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Core\bin\Debug\net10.0\ArkForge.Core.pdb
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Core\bin\Debug\net10.0\ArkForge.Common.dll
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Core\bin\Debug\net10.0\ArkForge.Configuration.dll
-C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Core\bin\Debug\net10.0\ArkForge.Server.dll
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Core\bin\Debug\net10.0\ArkForge.Common.pdb
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Core\bin\Debug\net10.0\ArkForge.Configuration.pdb
-C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Core\bin\Debug\net10.0\ArkForge.Server.pdb
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Core\obj\Debug\net10.0\ArkForge.Core.csproj.AssemblyReference.cache
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Core\obj\Debug\net10.0\ArkForge.Core.GeneratedMSBuildEditorConfig.editorconfig
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Core\obj\Debug\net10.0\ArkForge.Core.AssemblyInfoInputs.cache

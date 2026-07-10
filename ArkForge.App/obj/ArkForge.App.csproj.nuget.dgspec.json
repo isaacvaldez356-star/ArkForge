@@ -779,7 +779,11 @@
           "net10.0": {
             "framework": "net10.0",
             "targetAlias": "net10.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Common\\ArkForge.Common.csproj": {
+                "projectPath": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Common\\ArkForge.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -1127,9 +1131,6 @@
               },
               "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Configuration\\ArkForge.Configuration.csproj": {
                 "projectPath": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Configuration\\ArkForge.Configuration.csproj"
-              },
-              "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Server\\ArkForge.Server.csproj": {
-                "projectPath": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Server\\ArkForge.Server.csproj"
               }
             }
           }
@@ -1479,7 +1480,14 @@
           "net10.0": {
             "framework": "net10.0",
             "targetAlias": "net10.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Common\\ArkForge.Common.csproj": {
+                "projectPath": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Common\\ArkForge.Common.csproj"
+              },
+              "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Core\\ArkForge.Core.csproj": {
+                "projectPath": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Core\\ArkForge.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
