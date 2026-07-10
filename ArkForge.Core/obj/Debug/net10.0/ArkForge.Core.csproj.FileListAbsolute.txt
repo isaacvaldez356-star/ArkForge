@@ -12,6 +12,7 @@ C:\Users\isaac\OneDrive\Escritorio\ARKFORGE\ArkForge\ArkForge.Core\obj\Debug\net
 C:\Users\isaac\OneDrive\Escritorio\ARKFORGE\ArkForge\ArkForge.Core\obj\Debug\net10.0\ArkForge.Core.AssemblyInfoInputs.cache
 C:\Users\isaac\OneDrive\Escritorio\ARKFORGE\ArkForge\ArkForge.Core\obj\Debug\net10.0\ArkForge.Core.AssemblyInfo.cs
 C:\Users\isaac\OneDrive\Escritorio\ARKFORGE\ArkForge\ArkForge.Core\obj\Debug\net10.0\ArkForge.Core.csproj.CoreCompileInputs.cache
+C:\Users\isaac\OneDrive\Escritorio\ARKFORGE\ArkForge\ArkForge.Core\obj\Debug\net10.0\ArkForge.Core.sourcelink.json
 C:\Users\isaac\OneDrive\Escritorio\ARKFORGE\ArkForge\ArkForge.Core\obj\Debug\net10.0\ArkForge.2034111B.Up2Date
 C:\Users\isaac\OneDrive\Escritorio\ARKFORGE\ArkForge\ArkForge.Core\obj\Debug\net10.0\ArkForge.Core.dll
 C:\Users\isaac\OneDrive\Escritorio\ARKFORGE\ArkForge\ArkForge.Core\obj\Debug\net10.0\refint\ArkForge.Core.dll

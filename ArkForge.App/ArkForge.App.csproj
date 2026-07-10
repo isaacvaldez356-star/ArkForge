@@ -9,10 +9,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.9" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.9" />
+    <PackageReference Include="Serilog" Version="4.4.0" />
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="10.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ArkForge.Common\ArkForge.Common.csproj" />
     <ProjectReference Include="..\ArkForge.Configuration\ArkForge.Configuration.csproj" />
     <ProjectReference Include="..\ArkForge.Core\ArkForge.Core.csproj" />
     <ProjectReference Include="..\ArkForge.Server\ArkForge.Server.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

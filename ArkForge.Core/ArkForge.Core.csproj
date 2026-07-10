@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ArkForge.Common\ArkForge.Common.csproj" />
     <ProjectReference Include="..\ArkForge.Configuration\ArkForge.Configuration.csproj" />
     <ProjectReference Include="..\ArkForge.Server\ArkForge.Server.csproj" />

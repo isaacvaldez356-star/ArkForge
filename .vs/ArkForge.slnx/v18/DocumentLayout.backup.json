@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ECB02FCF-9E5F-4514-963E-D7045CAF629B}|ArkForge.Configuration\\ArkForge.Configuration.csproj|c:\\users\\isaac\\onedrive\\escritorio\\arkforge\\arkforge\\arkforge.configuration\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECB02FCF-9E5F-4514-963E-D7045CAF629B}|ArkForge.Configuration\\ArkForge.Configuration.csproj|solutionrelative:arkforge.configuration\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|c:\\users\\isaac\\onedrive\\escritorio\\arkforge\\arkforge\\arkforge.app\\views\\dashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|solutionrelative:arkforge.app\\views\\dashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A7BBBD8-7A67-4861-ABE8-1F5CE68619CA}|ArkForge.Common\\ArkForge.Common.csproj|c:\\users\\isaac\\onedrive\\escritorio\\arkforge\\arkforge\\arkforge.common\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A7BBBD8-7A67-4861-ABE8-1F5CE68619CA}|ArkForge.Common\\ArkForge.Common.csproj|solutionrelative:arkforge.common\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|c:\\users\\isaac\\onedrive\\escritorio\\arkforge\\arkforge\\arkforge.app\\shellview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|solutionrelative:arkforge.app\\shellview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15777618-0378-499C-9A7F-F1AF9A9AC14B}|ArkForge.Server\\ArkForge.Server.csproj|c:\\users\\isaac\\onedrive\\escritorio\\arkforge\\arkforge\\arkforge.server\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15777618-0378-499C-9A7F-F1AF9A9AC14B}|ArkForge.Server\\ArkForge.Server.csproj|solutionrelative:arkforge.server\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|c:\\users\\isaac\\onedrive\\escritorio\\arkforge\\arkforge\\arkforge.app\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|solutionrelative:arkforge.app\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{947A0AEA-2895-4EFB-ACC2-89B300B41858}|ArkForge.Core\\ArkForge.Core.csproj|c:\\users\\isaac\\onedrive\\escritorio\\arkforge\\arkforge\\arkforge.core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{947A0AEA-2895-4EFB-ACC2-89B300B41858}|ArkForge.Core\\ArkForge.Core.csproj|solutionrelative:arkforge.core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71FE4933-7201-4CFE-9814-42A8F239D3B3}|ArkForge.App\\ArkForge.App.csproj|c:\\users\\isaac\\onedrive\\escritorio\\arkforge\\arkforge\\arkforge.app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{71FE4933-7201-4CFE-9814-42A8F239D3B3}|ArkForge.App\\ArkForge.App.csproj|solutionrelative:arkforge.app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71FE4933-7201-4CFE-9814-42A8F239D3B3}|ArkForge.App\\ArkForge.App.csproj|c:\\users\\isaac\\onedrive\\escritorio\\arkforge\\arkforge\\arkforge.app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71FE4933-7201-4CFE-9814-42A8F239D3B3}|ArkForge.App\\ArkForge.App.csproj|solutionrelative:arkforge.app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|c:\\users\\isaac\\onedrive\\escritorio\\arkforge\\arkforge\\arkforge.app\\themes\\darktheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|solutionrelative:arkforge.app\\themes\\darktheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,78 +31,49 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.Configuration\\Class1.cs",
-              "RelativeDocumentMoniker": "ArkForge.Configuration\\Class1.cs",
-              "ToolTip": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.Configuration\\Class1.cs",
-              "RelativeToolTip": "ArkForge.Configuration\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T03:53:53.976Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.Common\\Class1.cs",
-              "RelativeDocumentMoniker": "ArkForge.Common\\Class1.cs",
-              "ToolTip": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.Common\\Class1.cs",
-              "RelativeToolTip": "ArkForge.Common\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T03:53:37.692Z",
+              "Title": "DashboardView.xaml",
+              "DocumentMoniker": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.App\\Views\\DashboardView.xaml",
+              "RelativeDocumentMoniker": "ArkForge.App\\Views\\DashboardView.xaml",
+              "ToolTip": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.App\\Views\\DashboardView.xaml",
+              "RelativeToolTip": "ArkForge.App\\Views\\DashboardView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-10T07:09:55.162Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.Server\\Class1.cs",
-              "RelativeDocumentMoniker": "ArkForge.Server\\Class1.cs",
-              "ToolTip": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.Server\\Class1.cs",
-              "RelativeToolTip": "ArkForge.Server\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T03:53:12.002Z",
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.App\\App.xaml",
+              "RelativeDocumentMoniker": "ArkForge.App\\App.xaml",
+              "ToolTip": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.App\\App.xaml",
+              "RelativeToolTip": "ArkForge.App\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-10T06:30:41.11Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.Core\\Class1.cs",
-              "RelativeDocumentMoniker": "ArkForge.Core\\Class1.cs",
-              "ToolTip": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.Core\\Class1.cs",
-              "RelativeToolTip": "ArkForge.Core\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T03:52:49.388Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.App\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "ArkForge.App\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.App\\MainWindow.xaml",
-              "RelativeToolTip": "ArkForge.App\\MainWindow.xaml",
+              "Title": "DarkTheme.xaml",
+              "DocumentMoniker": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.App\\Themes\\DarkTheme.xaml",
+              "RelativeDocumentMoniker": "ArkForge.App\\Themes\\DarkTheme.xaml",
+              "ToolTip": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.App\\Themes\\DarkTheme.xaml",
+              "RelativeToolTip": "ArkForge.App\\Themes\\DarkTheme.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-10T03:46:09.421Z",
+              "WhenOpened": "2026-07-10T06:30:13.32Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.App\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "ArkForge.App\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.App\\MainWindow.xaml.cs",
-              "RelativeToolTip": "ArkForge.App\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T03:46:06.404Z",
+              "DocumentIndex": 1,
+              "Title": "ShellView.xaml",
+              "DocumentMoniker": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.App\\ShellView.xaml",
+              "RelativeDocumentMoniker": "ArkForge.App\\ShellView.xaml",
+              "ToolTip": "C:\\Users\\isaac\\OneDrive\\Escritorio\\ARKFORGE\\ArkForge\\ArkForge.App\\ShellView.xaml",
+              "RelativeToolTip": "ArkForge.App\\ShellView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-10T05:18:47.517Z",
               "EditorCaption": ""
             }
           ]

@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="ArkForge.App.Views.DashboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UniformGrid Columns="4" Rows="1">
+
+        <Border Background="{StaticResource SurfaceBrush}" CornerRadius="8" Margin="8" Padding="16">
+            <StackPanel>
+                <TextBlock Text="Servidor" Foreground="{StaticResource TextSecondaryBrush}" FontSize="14"/>
+                <TextBlock Text="Offline" Foreground="{StaticResource DangerBrush}" FontSize="24" FontWeight="Bold" Margin="0,8,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <Border Background="{StaticResource SurfaceBrush}" CornerRadius="8" Margin="8" Padding="16">
+            <StackPanel>
+                <TextBlock Text="Mapa" Foreground="{StaticResource TextSecondaryBrush}" FontSize="14"/>
+                <TextBlock Text="No seleccionado" Foreground="{StaticResource TextPrimaryBrush}" FontSize="20" FontWeight="Bold" Margin="0,8,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <Border Background="{StaticResource SurfaceBrush}" CornerRadius="8" Margin="8" Padding="16">
+            <StackPanel>
+                <TextBlock Text="Mods" Foreground="{StaticResource TextSecondaryBrush}" FontSize="14"/>
+                <TextBlock Text="0" Foreground="{StaticResource TextPrimaryBrush}" FontSize="24" FontWeight="Bold" Margin="0,8,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <Border Background="{StaticResource SurfaceBrush}" CornerRadius="8" Margin="8" Padding="16">
+            <StackPanel>
+                <TextBlock Text="Jugadores" Foreground="{StaticResource TextSecondaryBrush}" FontSize="14"/>
+                <TextBlock Text="0 / 0" Foreground="{StaticResource TextPrimaryBrush}" FontSize="24" FontWeight="Bold" Margin="0,8,0,0"/>
+            </StackPanel>
+        </Border>
+
+    </UniformGrid>
+</UserControl>
