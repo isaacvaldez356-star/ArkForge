@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/docs/" />
+  <Folder Name="/src/">
+    <Project Path="ArkForge.App/ArkForge.App.csproj" />
+    <Project Path="ArkForge.Common/ArkForge.Common.csproj" />
+    <Project Path="ArkForge.Configuration/ArkForge.Configuration.csproj" />
+    <Project Path="ArkForge.Core/ArkForge.Core.csproj" />
+    <Project Path="ArkForge.Server/ArkForge.Server.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>
