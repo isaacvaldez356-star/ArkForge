@@ -9,5 +9,7 @@
 
         bool IsRunning { get; }
         bool IsInstalled { get; }
+
+        event Action<string>? OutputReceived;
     }
 }

@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ArkForge.Common\ArkForge.Common.csproj" />
     <ProjectReference Include="..\ArkForge.Core\ArkForge.Core.csproj" />
+    <ProjectReference Include="..\ArkForge.Rcon\ArkForge.Rcon.csproj" />
   </ItemGroup>
 
 </Project>

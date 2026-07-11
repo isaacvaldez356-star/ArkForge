@@ -158,3 +158,5 @@ C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.App\obj\Debug\net10.0-windows\refint\Ark
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.App\obj\Debug\net10.0-windows\ArkForge.App.pdb
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.App\obj\Debug\net10.0-windows\ArkForge.App.genruntimeconfig.cache
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.App\obj\Debug\net10.0-windows\ref\ArkForge.App.dll
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.App\bin\Debug\net10.0-windows\ArkForge.Rcon.dll
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.App\bin\Debug\net10.0-windows\ArkForge.Rcon.pdb

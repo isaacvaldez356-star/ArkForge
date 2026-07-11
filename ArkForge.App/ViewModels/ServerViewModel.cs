@@ -8,7 +8,7 @@ namespace ArkForge.App.ViewModels
     public partial class ServerViewModel : ObservableObject
     {
         private readonly ArkGameServer _server;
-        private readonly ConfigService _configService;
+        
 
         [ObservableProperty]
         private double installProgress;
@@ -19,12 +19,9 @@ namespace ArkForge.App.ViewModels
         [ObservableProperty]
         private string statusText = "No instalado";
 
-        public ServerViewModel()
+        public ServerViewModel(ArkGameServer server)
         {
-            _configService = new ConfigService();
-            var config = _configService.Load();
-            _server = new ArkGameServer(config);
-
+            _server = server;
             UpdateStatus();
         }
 

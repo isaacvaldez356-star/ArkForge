@@ -701,12 +701,23 @@
           "bin/placeholder/ArkForge.Core.dll": {}
         }
       },
+      "ArkForge.Rcon/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/ArkForge.Rcon.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ArkForge.Rcon.dll": {}
+        }
+      },
       "ArkForge.Server/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "ArkForge.Common": "1.0.0",
-          "ArkForge.Core": "1.0.0"
+          "ArkForge.Core": "1.0.0",
+          "ArkForge.Rcon": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ArkForge.Server.dll": {}
@@ -1741,6 +1752,11 @@
       "type": "project",
       "path": "../ArkForge.Core/ArkForge.Core.csproj",
       "msbuildProject": "../ArkForge.Core/ArkForge.Core.csproj"
+    },
+    "ArkForge.Rcon/1.0.0": {
+      "type": "project",
+      "path": "../ArkForge.Rcon/ArkForge.Rcon.csproj",
+      "msbuildProject": "../ArkForge.Rcon/ArkForge.Rcon.csproj"
     },
     "ArkForge.Server/1.0.0": {
       "type": "project",

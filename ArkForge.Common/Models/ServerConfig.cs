@@ -2,6 +2,7 @@
 {
     public class ServerConfig
     {
+        public string AdminPassword { get; set; } = "ArkForge123";
         public string ServerPath { get; set; } = "C:\\ArkForge\\Server";
         public string SteamCmdPath { get; set; } = "C:\\ArkForge\\SteamCMD";
         public string Map { get; set; } = "TheIsland";
@@ -9,5 +10,6 @@
         public int QueryPort { get; set; } = 27015;
         public int GamePort { get; set; } = 7777;
         public int RconPort { get; set; } = 27020;
+
     }
 }

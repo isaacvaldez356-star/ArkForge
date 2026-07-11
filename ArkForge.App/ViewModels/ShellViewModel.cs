@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using ArkForge.Server;
+using ArkForge.Configuration;
 
 namespace ArkForge.App.ViewModels
 {
@@ -7,6 +9,8 @@ namespace ArkForge.App.ViewModels
     {
         [ObservableProperty]
         private object? currentView;
+
+        private readonly ArkGameServer _sharedServer;
 
         private readonly DashboardViewModel _dashboardViewModel;
         private readonly ServerViewModel _serverViewModel;
@@ -18,12 +22,16 @@ namespace ArkForge.App.ViewModels
 
         public ShellViewModel()
         {
+            var configService = new ConfigService();
+            var config = configService.Load();
+            _sharedServer = new ArkGameServer(config);
+
             _dashboardViewModel = new DashboardViewModel();
-            _serverViewModel = new ServerViewModel();
+            _serverViewModel = new ServerViewModel(_sharedServer);
             _modsViewModel = new ModsViewModel();
             _configurationViewModel = new ConfigurationViewModel();
             _backupViewModel = new BackupViewModel();
-            _consoleViewModel = new ConsoleViewModel();
+            _consoleViewModel = new ConsoleViewModel(_sharedServer);
             _settingsViewModel = new SettingsViewModel();
 
             CurrentView = _dashboardViewModel;

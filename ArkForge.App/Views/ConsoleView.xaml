@@ -3,10 +3,59 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ArkForge.App.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock Text="Console" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+    <UserControl.InputBindings>
+        <KeyBinding Key="Return" Command="{Binding SendCommandCommand}"/>
+    </UserControl.InputBindings>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Consola (RCON)" FontSize="24" FontWeight="Bold" 
+                       Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"/>
+
+            <Button Content="Limpiar" Command="{Binding ClearCommand}" 
+                    Margin="20,0,0,0" Padding="15,5"
+                    Background="{StaticResource SurfaceBrush}" Foreground="White" BorderThickness="0"/>
+        </StackPanel>
+
+        <Border Grid.Row="1" Background="Black" CornerRadius="4" Margin="0,0,0,10">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="10">
+                <ItemsControl ItemsSource="{Binding Lines}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" 
+                                       Foreground="#00FF00" 
+                                       FontFamily="Consolas" 
+                                       FontSize="12"
+                                       TextWrapping="Wrap"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Border>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Column="0" Text="{Binding CommandText, UpdateSourceTrigger=PropertyChanged}" 
+                      Padding="10" FontFamily="Consolas"
+                      Background="{StaticResource SurfaceBrush}" Foreground="White" BorderThickness="0"/>
+
+            <Button Grid.Column="1" Content="Enviar" Command="{Binding SendCommandCommand}" 
+                    Margin="10,0,0,0" Padding="15,8"
+                    Background="{StaticResource PrimaryBrush}" Foreground="White" BorderThickness="0"/>
+        </Grid>
+
     </Grid>
 </UserControl>

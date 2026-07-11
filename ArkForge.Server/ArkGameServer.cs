@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using ArkForge.Core.Interfaces;
 using ArkForge.Common.Models;
+using ArkForge.Rcon;
 
 namespace ArkForge.Server
 {
@@ -8,7 +9,15 @@ namespace ArkForge.Server
     {
         private readonly ServerConfig _config;
         private readonly SteamCmdService _steamCmd;
+        private readonly LogWatcherService _logWatcher = new();
+        private RconClient? _rconClient;
         private Process? _process;
+
+        public event Action<string>? OutputReceived
+        {
+            add => _logWatcher.LineReceived += value;
+            remove => _logWatcher.LineReceived -= value;
+        }
 
         // App ID oficial de "ARK: Survival Evolved Dedicated Server" en Steam
         private const string ArkAppId = "376030";
@@ -55,16 +64,22 @@ namespace ArkForge.Server
             var exePath = Path.Combine(_config.ServerPath, "ShooterGame", "Binaries", "Win64", "ShooterGameServer.exe");
 
             var args = $"{_config.Map}?listen?QueryPort={_config.QueryPort}?Port={_config.GamePort}" +
-                       $"?MaxPlayers={_config.MaxPlayers} -server -RCONPort={_config.RconPort}";
+           $"?MaxPlayers={_config.MaxPlayers}?ServerAdminPassword={_config.AdminPassword}?RCONEnabled=True" +
+           $" -server -RCONPort={_config.RconPort} -log -servergamelog";
 
             var startInfo = new ProcessStartInfo
             {
                 FileName = exePath,
                 Arguments = args,
-                UseShellExecute = false
+                UseShellExecute = false,
+                CreateNoWindow = true
             };
 
             _process = Process.Start(startInfo);
+
+            var logPath = Path.Combine(_config.ServerPath, "ShooterGame", "Saved", "Logs", "ShooterGame.log");
+            _logWatcher.Start(logPath);
+
             return Task.CompletedTask;
         }
 
@@ -75,6 +90,7 @@ namespace ArkForge.Server
                 _process!.Kill();
                 _process = null;
             }
+            _logWatcher.Stop();
             return Task.CompletedTask;
         }
 
@@ -83,6 +99,21 @@ namespace ArkForge.Server
             await StopAsync();
             await Task.Delay(2000);
             await StartAsync();
+        }
+
+        public async Task<string?> SendCommandAsync(string command)
+        {
+            if (_rconClient == null || !_rconClient.IsConnected)
+            {
+                _rconClient = new RconClient();
+                var connected = await _rconClient.ConnectAsync("127.0.0.1", _config.RconPort, _config.AdminPassword);
+
+                if (!connected)
+                    return "[No se pudo conectar por RCON. ¿El servidor ya terminó de arrancar?]";
+            }
+
+            var response = await _rconClient.SendCommandAsync(command);
+            return response ?? "[Sin respuesta]";
         }
     }
 }

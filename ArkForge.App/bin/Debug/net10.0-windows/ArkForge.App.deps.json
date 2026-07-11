@@ -469,10 +469,19 @@
           }
         }
       },
+      "ArkForge.Rcon/1.0.0": {
+        "runtime": {
+          "ArkForge.Rcon.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "ArkForge.Server/1.0.0": {
         "dependencies": {
           "ArkForge.Common": "1.0.0",
-          "ArkForge.Core": "1.0.0"
+          "ArkForge.Core": "1.0.0",
+          "ArkForge.Rcon": "1.0.0"
         },
         "runtime": {
           "ArkForge.Server.dll": {
@@ -724,6 +733,11 @@
       "sha512": ""
     },
     "ArkForge.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ArkForge.Rcon/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

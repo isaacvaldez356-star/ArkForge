@@ -55,6 +55,16 @@
         "runtime": {
           "bin/placeholder/ArkForge.Core.dll": {}
         }
+      },
+      "ArkForge.Rcon/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/ArkForge.Rcon.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ArkForge.Rcon.dll": {}
+        }
       }
     }
   },
@@ -113,12 +123,18 @@
       "type": "project",
       "path": "../ArkForge.Core/ArkForge.Core.csproj",
       "msbuildProject": "../ArkForge.Core/ArkForge.Core.csproj"
+    },
+    "ArkForge.Rcon/1.0.0": {
+      "type": "project",
+      "path": "../ArkForge.Rcon/ArkForge.Rcon.csproj",
+      "msbuildProject": "../ArkForge.Rcon/ArkForge.Rcon.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "ArkForge.Common >= 1.0.0",
-      "ArkForge.Core >= 1.0.0"
+      "ArkForge.Core >= 1.0.0",
+      "ArkForge.Rcon >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -160,6 +176,9 @@
             },
             "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Core\\ArkForge.Core.csproj": {
               "projectPath": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Core\\ArkForge.Core.csproj"
+            },
+            "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Rcon\\ArkForge.Rcon.csproj": {
+              "projectPath": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Rcon\\ArkForge.Rcon.csproj"
             }
           }
         }
