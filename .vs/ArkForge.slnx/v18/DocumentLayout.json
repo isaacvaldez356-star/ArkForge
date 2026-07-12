@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0B4A9F16-B9B4-A201-2D23-CC4A9D07478F}|ArkForge.Server\\ArkForge.Server.csproj|c:\\proyectos\\arkforge\\arkforge\\arkforge.server\\arkgameserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B4A9F16-B9B4-A201-2D23-CC4A9D07478F}|ArkForge.Server\\ArkForge.Server.csproj|solutionrelative:arkforge.server\\arkgameserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|c:\\proyectos\\arkforge\\arkforge\\arkforge.app\\views\\configurationview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|solutionrelative:arkforge.app\\views\\configurationview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|c:\\proyectos\\arkforge\\arkforge\\arkforge.app\\viewmodels\\shellviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|solutionrelative:arkforge.app\\viewmodels\\shellviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|c:\\proyectos\\arkforge\\arkforge\\arkforge.app\\viewmodels\\configurationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|solutionrelative:arkforge.app\\viewmodels\\configurationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E19E1BD1-9039-1F6B-AD32-CCB38CC18123}|ArkForge.Configuration\\ArkForge.Configuration.csproj|c:\\proyectos\\arkforge\\arkforge\\arkforge.configuration\\gamesettingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E19E1BD1-9039-1F6B-AD32-CCB38CC18123}|ArkForge.Configuration\\ArkForge.Configuration.csproj|solutionrelative:arkforge.configuration\\gamesettingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9525E44-71C1-5186-716C-7D810832B50B}|ArkForge.Common\\ArkForge.Common.csproj|c:\\proyectos\\arkforge\\arkforge\\arkforge.common\\models\\serverconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9525E44-71C1-5186-716C-7D810832B50B}|ArkForge.Common\\ArkForge.Common.csproj|solutionrelative:arkforge.common\\models\\serverconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|c:\\proyectos\\arkforge\\arkforge\\arkforge.app\\viewmodels\\modsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|solutionrelative:arkforge.app\\viewmodels\\modsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9525E44-71C1-5186-716C-7D810832B50B}|ArkForge.Common\\ArkForge.Common.csproj|c:\\proyectos\\arkforge\\arkforge\\arkforge.common\\models\\gamesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9525E44-71C1-5186-716C-7D810832B50B}|ArkForge.Common\\ArkForge.Common.csproj|solutionrelative:arkforge.common\\models\\gamesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4A9F16-B9B4-A201-2D23-CC4A9D07478F}|ArkForge.Server\\ArkForge.Server.csproj|c:\\proyectos\\arkforge\\arkforge\\arkforge.server\\arkgameserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4A9F16-B9B4-A201-2D23-CC4A9D07478F}|ArkForge.Server\\ArkForge.Server.csproj|solutionrelative:arkforge.server\\arkgameserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0B4A9F16-B9B4-A201-2D23-CC4A9D07478F}|ArkForge.Server\\ArkForge.Server.csproj|c:\\proyectos\\arkforge\\arkforge\\arkforge.server\\modservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B4A9F16-B9B4-A201-2D23-CC4A9D07478F}|ArkForge.Server\\ArkForge.Server.csproj|solutionrelative:arkforge.server\\modservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|c:\\proyectos\\arkforge\\arkforge\\arkforge.app\\views\\modsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|solutionrelative:arkforge.app\\views\\modsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|c:\\proyectos\\arkforge\\arkforge\\arkforge.app\\viewmodels\\shellviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6816CEED-44EC-CD1F-1D5A-D31E49FB412E}|ArkForge.App\\ArkForge.App.csproj|solutionrelative:arkforge.app\\viewmodels\\shellviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9525E44-71C1-5186-716C-7D810832B50B}|ArkForge.Common\\ArkForge.Common.csproj|c:\\proyectos\\arkforge\\arkforge\\arkforge.common\\models\\modinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,56 +55,83 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ConfigurationView.xaml",
+              "DocumentMoniker": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.App\\Views\\ConfigurationView.xaml",
+              "RelativeDocumentMoniker": "ArkForge.App\\Views\\ConfigurationView.xaml",
+              "ToolTip": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.App\\Views\\ConfigurationView.xaml",
+              "RelativeToolTip": "ArkForge.App\\Views\\ConfigurationView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-12T20:57:31.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShellViewModel.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.App\\ViewModels\\ShellViewModel.cs",
+              "RelativeDocumentMoniker": "ArkForge.App\\ViewModels\\ShellViewModel.cs",
+              "ToolTip": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.App\\ViewModels\\ShellViewModel.cs",
+              "RelativeToolTip": "ArkForge.App\\ViewModels\\ShellViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T20:56:27.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConfigurationViewModel.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.App\\ViewModels\\ConfigurationViewModel.cs",
+              "RelativeDocumentMoniker": "ArkForge.App\\ViewModels\\ConfigurationViewModel.cs",
+              "ToolTip": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.App\\ViewModels\\ConfigurationViewModel.cs",
+              "RelativeToolTip": "ArkForge.App\\ViewModels\\ConfigurationViewModel.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAswGUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T20:55:52.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameSettingsService.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Configuration\\GameSettingsService.cs",
+              "RelativeDocumentMoniker": "ArkForge.Configuration\\GameSettingsService.cs",
+              "ToolTip": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Configuration\\GameSettingsService.cs",
+              "RelativeToolTip": "ArkForge.Configuration\\GameSettingsService.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAswF8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T20:53:01.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameSettings.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Common\\Models\\GameSettings.cs",
+              "RelativeDocumentMoniker": "ArkForge.Common\\Models\\GameSettings.cs",
+              "ToolTip": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Common\\Models\\GameSettings.cs",
+              "RelativeToolTip": "ArkForge.Common\\Models\\GameSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T20:48:22.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ArkGameServer.cs",
               "DocumentMoniker": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Server\\ArkGameServer.cs",
               "RelativeDocumentMoniker": "ArkForge.Server\\ArkGameServer.cs",
               "ToolTip": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Server\\ArkGameServer.cs",
               "RelativeToolTip": "ArkForge.Server\\ArkGameServer.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAIUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAA6wIUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-12T01:43:48.644Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ModsView.xaml",
-              "DocumentMoniker": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.App\\Views\\ModsView.xaml",
-              "RelativeDocumentMoniker": "ArkForge.App\\Views\\ModsView.xaml",
-              "ToolTip": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.App\\Views\\ModsView.xaml",
-              "RelativeToolTip": "ArkForge.App\\Views\\ModsView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-11T07:17:50.072Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ShellViewModel.cs",
-              "DocumentMoniker": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.App\\ViewModels\\ShellViewModel.cs",
-              "RelativeDocumentMoniker": "ArkForge.App\\ViewModels\\ShellViewModel.cs",
-              "ToolTip": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.App\\ViewModels\\ShellViewModel.cs",
-              "RelativeToolTip": "ArkForge.App\\ViewModels\\ShellViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T07:16:39.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ModsViewModel.cs",
-              "DocumentMoniker": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.App\\ViewModels\\ModsViewModel.cs",
-              "RelativeDocumentMoniker": "ArkForge.App\\ViewModels\\ModsViewModel.cs",
-              "ToolTip": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.App\\ViewModels\\ModsViewModel.cs",
-              "RelativeToolTip": "ArkForge.App\\ViewModels\\ModsViewModel.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAiwEkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T07:11:43.74Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "ModService.cs",
               "DocumentMoniker": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Server\\ModService.cs",
               "RelativeDocumentMoniker": "ArkForge.Server\\ModService.cs",
@@ -104,12 +139,11 @@
               "RelativeToolTip": "ArkForge.Server\\ModService.cs",
               "ViewState": "AgIAADkAAAAAAAAAAAAqwFoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T07:06:36.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T07:06:36.802Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ModInfo.cs",
               "DocumentMoniker": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Common\\Models\\ModInfo.cs",
               "RelativeDocumentMoniker": "ArkForge.Common\\Models\\ModInfo.cs",
@@ -121,20 +155,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "ServerConfig.cs",
               "DocumentMoniker": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Common\\Models\\ServerConfig.cs",
               "RelativeDocumentMoniker": "ArkForge.Common\\Models\\ServerConfig.cs",
               "ToolTip": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Common\\Models\\ServerConfig.cs",
               "RelativeToolTip": "ArkForge.Common\\Models\\ServerConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-10T23:38:51.948Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "ShellView.xaml",
               "DocumentMoniker": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.App\\ShellView.xaml",
               "RelativeDocumentMoniker": "ArkForge.App\\ShellView.xaml",
