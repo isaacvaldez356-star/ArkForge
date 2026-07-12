@@ -28,7 +28,7 @@ namespace ArkForge.App.ViewModels
 
             _dashboardViewModel = new DashboardViewModel();
             _serverViewModel = new ServerViewModel(_sharedServer);
-            _modsViewModel = new ModsViewModel();
+            _modsViewModel = new ModsViewModel(config, configService);
             _configurationViewModel = new ConfigurationViewModel();
             _backupViewModel = new BackupViewModel();
             _consoleViewModel = new ConsoleViewModel(_sharedServer);

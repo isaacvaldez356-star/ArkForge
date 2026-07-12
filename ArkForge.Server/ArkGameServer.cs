@@ -61,11 +61,16 @@ namespace ArkForge.Server
             if (IsRunning)
                 return Task.CompletedTask;
 
+            UpdateActiveModsIni();
+
             var exePath = Path.Combine(_config.ServerPath, "ShooterGame", "Binaries", "Win64", "ShooterGameServer.exe");
 
+            var enabledMods = _config.Mods.Where(m => m.IsEnabled).Select(m => m.WorkshopId).ToList();
+            var automanagedFlag = enabledMods.Count > 0 ? " -automanagedmods" : "";
+
             var args = $"{_config.Map}?listen?QueryPort={_config.QueryPort}?Port={_config.GamePort}" +
-           $"?MaxPlayers={_config.MaxPlayers}?ServerAdminPassword={_config.AdminPassword}?RCONEnabled=True" +
-           $" -server -RCONPort={_config.RconPort} -log -servergamelog";
+                       $"?MaxPlayers={_config.MaxPlayers}?ServerAdminPassword={_config.AdminPassword}?RCONEnabled=True" +
+                       $" -server -RCONPort={_config.RconPort} -log -servergamelog{automanagedFlag}";
 
             var startInfo = new ProcessStartInfo
             {
@@ -81,6 +86,51 @@ namespace ArkForge.Server
             _logWatcher.Start(logPath);
 
             return Task.CompletedTask;
+        }
+
+        private void UpdateActiveModsIni()
+        {
+            var iniPath = Path.Combine(_config.ServerPath, "ShooterGame", "Saved", "Config", "WindowsServer", "GameUserSettings.ini");
+            Directory.CreateDirectory(Path.GetDirectoryName(iniPath)!);
+
+            var enabledMods = _config.Mods.Where(m => m.IsEnabled).Select(m => m.WorkshopId).ToList();
+            var activeModsLine = $"ActiveMods={string.Join(",", enabledMods)}";
+
+            var lines = File.Exists(iniPath) ? File.ReadAllLines(iniPath).ToList() : new List<string>();
+
+            var sectionIndex = lines.FindIndex(l => l.Trim().Equals("[ServerSettings]", StringComparison.OrdinalIgnoreCase));
+
+            if (sectionIndex == -1)
+            {
+                lines.Add("[ServerSettings]");
+                lines.Add(activeModsLine);
+            }
+            else
+            {
+                var activeModsIndex = -1;
+                var nextSectionIndex = lines.Count;
+
+                for (var i = sectionIndex + 1; i < lines.Count; i++)
+                {
+                    if (lines[i].Trim().StartsWith('[') && lines[i].Trim().EndsWith(']'))
+                    {
+                        nextSectionIndex = i;
+                        break;
+                    }
+                    if (lines[i].Trim().StartsWith("ActiveMods=", StringComparison.OrdinalIgnoreCase))
+                    {
+                        activeModsIndex = i;
+                        break;
+                    }
+                }
+
+                if (activeModsIndex != -1)
+                    lines[activeModsIndex] = activeModsLine;
+                else
+                    lines.Insert(nextSectionIndex, activeModsLine);
+            }
+
+            File.WriteAllLines(iniPath, lines);
         }
 
         public Task StopAsync()

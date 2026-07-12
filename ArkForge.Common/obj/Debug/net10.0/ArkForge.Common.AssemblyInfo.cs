@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ArkForge.Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d61ee94fded0c33473852555e364fd4209ac92d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8d61eb92376e076ccbb96580536c1413c39e80f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ArkForge.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ArkForge.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

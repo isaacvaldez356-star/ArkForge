@@ -5,6 +5,7 @@
         public string AdminPassword { get; set; } = "ArkForge123";
         public string ServerPath { get; set; } = "C:\\ArkForge\\Server";
         public string SteamCmdPath { get; set; } = "C:\\ArkForge\\SteamCMD";
+        public List<ModInfo> Mods { get; set; } = new();
         public string Map { get; set; } = "TheIsland";
         public int MaxPlayers { get; set; } = 10;
         public int QueryPort { get; set; } = 27015;
