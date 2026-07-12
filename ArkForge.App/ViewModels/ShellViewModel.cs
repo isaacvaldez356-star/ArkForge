@@ -30,7 +30,7 @@ namespace ArkForge.App.ViewModels
             _serverViewModel = new ServerViewModel(_sharedServer);
             _modsViewModel = new ModsViewModel(config, configService);
             _configurationViewModel = new ConfigurationViewModel(config, configService);
-            _backupViewModel = new BackupViewModel();
+            _backupViewModel = new BackupViewModel(config);
             _consoleViewModel = new ConsoleViewModel(_sharedServer);
             _settingsViewModel = new SettingsViewModel();
 
