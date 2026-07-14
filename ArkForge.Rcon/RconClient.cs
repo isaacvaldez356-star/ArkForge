@@ -8,6 +8,7 @@ namespace ArkForge.Rcon
         private TcpClient? _client;
         private NetworkStream? _stream;
         private int _requestId = 0;
+        private readonly SemaphoreSlim _lock = new(1, 1);
 
         public bool IsConnected => _client?.Connected ?? false;
 
@@ -41,35 +42,43 @@ namespace ArkForge.Rcon
             if (_stream == null)
                 return null;
 
-            _requestId++;
-            var bodyBytes = Encoding.UTF8.GetBytes(body);
-            var packetSize = 4 + 4 + bodyBytes.Length + 2;
+            await _lock.WaitAsync();
+            try
+            {
+                _requestId++;
+                var bodyBytes = Encoding.UTF8.GetBytes(body);
+                var packetSize = 4 + 4 + bodyBytes.Length + 2;
 
-            using var ms = new MemoryStream();
-            using var writer = new BinaryWriter(ms);
+                using var ms = new MemoryStream();
+                using var writer = new BinaryWriter(ms);
 
-            writer.Write(packetSize);
-            writer.Write(_requestId);
-            writer.Write(type);
-            writer.Write(bodyBytes);
-            writer.Write((byte)0);
-            writer.Write((byte)0);
+                writer.Write(packetSize);
+                writer.Write(_requestId);
+                writer.Write(type);
+                writer.Write(bodyBytes);
+                writer.Write((byte)0);
+                writer.Write((byte)0);
 
-            var packet = ms.ToArray();
-            await _stream.WriteAsync(packet);
+                var packet = ms.ToArray();
+                await _stream.WriteAsync(packet);
 
-            var responseBuffer = new byte[4096];
-            var bytesRead = await _stream.ReadAsync(responseBuffer);
+                var responseBuffer = new byte[4096];
+                var bytesRead = await _stream.ReadAsync(responseBuffer);
 
-            if (bytesRead < 12)
-                return null;
+                if (bytesRead < 12)
+                    return null;
 
-            var responseId = BitConverter.ToInt32(responseBuffer, 4);
-            if (responseId == -1)
-                return null; // Autenticación fallida
+                var responseId = BitConverter.ToInt32(responseBuffer, 4);
+                if (responseId == -1)
+                    return null;
 
-            var responseBodyLength = bytesRead - 12;
-            return Encoding.UTF8.GetString(responseBuffer, 12, responseBodyLength).TrimEnd('\0');
+                var responseBodyLength = bytesRead - 12;
+                return Encoding.UTF8.GetString(responseBuffer, 12, responseBodyLength).TrimEnd('\0');
+            }
+            finally
+            {
+                _lock.Release();
+            }
         }
 
         public void Dispose()

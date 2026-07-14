@@ -16,6 +16,10 @@
                 <Button Content="Guardar" Command="{Binding SaveCommand}" 
                         Margin="20,0,0,0" Padding="20,8"
                         Background="{StaticResource PrimaryBrush}" Foreground="White" BorderThickness="0"/>
+
+                <Button Content="Aplicar perfil Ultimate Annunaki" Command="{Binding ApplyAnnunakiProfileCommand}" 
+        Margin="10,0,0,0" Padding="20,8"
+        Background="{StaticResource SecondaryBrush}" Foreground="White" BorderThickness="0"/>
             </StackPanel>
 
             <TextBlock Text="{Binding StatusMessage}" Foreground="{StaticResource SuccessBrush}" Margin="0,0,0,20"/>

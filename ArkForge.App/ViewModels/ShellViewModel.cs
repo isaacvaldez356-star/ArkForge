@@ -26,13 +26,13 @@ namespace ArkForge.App.ViewModels
             var config = configService.Load();
             _sharedServer = new ArkGameServer(config);
 
-            _dashboardViewModel = new DashboardViewModel();
+            _dashboardViewModel = new DashboardViewModel(_sharedServer, config);
             _serverViewModel = new ServerViewModel(_sharedServer);
             _modsViewModel = new ModsViewModel(config, configService);
             _configurationViewModel = new ConfigurationViewModel(config, configService);
             _backupViewModel = new BackupViewModel(config);
             _consoleViewModel = new ConsoleViewModel(_sharedServer);
-            _settingsViewModel = new SettingsViewModel();
+            _settingsViewModel = new SettingsViewModel(config, configService, _sharedServer, _configurationViewModel);
 
             CurrentView = _dashboardViewModel;
         }

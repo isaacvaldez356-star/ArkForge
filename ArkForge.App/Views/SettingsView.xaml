@@ -3,10 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ArkForge.App.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock Text="Settings" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-    </Grid>
+
+    <StackPanel Margin="20">
+
+        <TextBlock Text="Ajustes" FontSize="24" FontWeight="Bold" 
+                   Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,20"/>
+
+        <Border Background="{StaticResource SurfaceBrush}" CornerRadius="8" Padding="20">
+            <StackPanel>
+                <TextBlock Text="Zona de peligro" FontSize="16" FontWeight="Bold" 
+                           Foreground="{StaticResource DangerBrush}" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Restaura la configuración y el mapa a su estado inicial. Los mods quedan desactivados (no se borran) y los backups no se tocan." 
+                           Foreground="{StaticResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,0,0,15"/>
+
+                <Button Content="Reset de fábrica" Command="{Binding FactoryResetCommand}" 
+                        Padding="20,10" HorizontalAlignment="Left"
+                        Background="{StaticResource DangerBrush}" Foreground="White" BorderThickness="0"/>
+            </StackPanel>
+        </Border>
+
+        <TextBlock Text="{Binding StatusMessage}" Foreground="{StaticResource SuccessBrush}" Margin="0,15,0,0"/>
+
+    </StackPanel>
 </UserControl>

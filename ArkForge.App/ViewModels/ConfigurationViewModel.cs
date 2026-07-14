@@ -98,5 +98,40 @@ namespace ArkForge.App.ViewModels
 
             StatusMessage = "Configuración guardada. Reinicia el servidor para aplicar los cambios.";
         }
+
+        [RelayCommand]
+        private void ApplyAnnunakiProfile()
+        {
+            XpMultiplier = 15;
+            TamingSpeedMultiplier = 20;
+            HarvestAmountMultiplier = 5;
+            MatingIntervalMultiplier = 0.5;
+            BabyMatureSpeedMultiplier = 20;
+            PlayerDamageMultiplier = 1;
+            DinoDamageMultiplier = 1;
+            StructureDamageMultiplier = 1;
+            PlayerResistanceMultiplier = 1;
+            DinoResistanceMultiplier = 1;
+
+            StatusMessage = "Perfil 'Ultimate Annunaki' aplicado. No olvides darle Guardar.";
+        }
+
+        public void ReloadFromConfig()
+        {
+            var s = _config.GameSettings;
+            XpMultiplier = s.XpMultiplier;
+            TamingSpeedMultiplier = s.TamingSpeedMultiplier;
+            HarvestAmountMultiplier = s.HarvestAmountMultiplier;
+            MatingIntervalMultiplier = s.MatingIntervalMultiplier;
+            BabyMatureSpeedMultiplier = s.BabyMatureSpeedMultiplier;
+            PlayerDamageMultiplier = s.PlayerDamageMultiplier;
+            DinoDamageMultiplier = s.DinoDamageMultiplier;
+            StructureDamageMultiplier = s.StructureDamageMultiplier;
+            PlayerResistanceMultiplier = s.PlayerResistanceMultiplier;
+            DinoResistanceMultiplier = s.DinoResistanceMultiplier;
+            AllowThirdPersonPlayer = s.AllowThirdPersonPlayer;
+            ShowMapPlayerLocation = s.ShowMapPlayerLocation;
+            EnablePvE = s.EnablePvE;
+        }
     }
 }

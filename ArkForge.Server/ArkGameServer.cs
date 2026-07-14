@@ -31,7 +31,17 @@ namespace ArkForge.Server
         public bool IsInstalled => File.Exists(
             Path.Combine(_config.ServerPath, "ShooterGame", "Binaries", "Win64", "ShooterGameServer.exe"));
 
-        public bool IsRunning => _process is { HasExited: false };
+        public bool IsRunning
+        {
+            get
+            {
+                if (_process is { HasExited: false })
+                    return true;
+
+                // Aunque no lo hayamos iniciado en esta sesión, revisamos si sigue corriendo en Windows
+                return Process.GetProcessesByName("ShooterGameServer").Length > 0;
+            }
+        }
 
         public async Task InstallAsync(IProgress<double>? progress = null)
         {
@@ -135,12 +145,23 @@ namespace ArkForge.Server
 
         public Task StopAsync()
         {
-            if (IsRunning)
+            if (_process is { HasExited: false })
             {
-                _process!.Kill();
+                _process.Kill();
                 _process = null;
             }
+            else
+            {
+                // El servidor puede estar corriendo desde otra sesión de ArkForge
+                foreach (var proc in Process.GetProcessesByName("ShooterGameServer"))
+                {
+                    proc.Kill();
+                }
+            }
+
             _logWatcher.Stop();
+            _rconClient?.Dispose();
+            _rconClient = null;
             return Task.CompletedTask;
         }
 
@@ -153,17 +174,26 @@ namespace ArkForge.Server
 
         public async Task<string?> SendCommandAsync(string command)
         {
-            if (_rconClient == null || !_rconClient.IsConnected)
+            try
             {
-                _rconClient = new RconClient();
-                var connected = await _rconClient.ConnectAsync("127.0.0.1", _config.RconPort, _config.AdminPassword);
+                if (_rconClient == null || !_rconClient.IsConnected)
+                {
+                    _rconClient = new RconClient();
+                    var connected = await _rconClient.ConnectAsync("127.0.0.1", _config.RconPort, _config.AdminPassword);
 
-                if (!connected)
-                    return "[No se pudo conectar por RCON. ¿El servidor ya terminó de arrancar?]";
+                    if (!connected)
+                        return "[No se pudo conectar por RCON. ¿El servidor ya terminó de arrancar?]";
+                }
+
+                var response = await _rconClient.SendCommandAsync(command);
+                return response ?? "[Sin respuesta]";
             }
-
-            var response = await _rconClient.SendCommandAsync(command);
-            return response ?? "[Sin respuesta]";
+            catch (Exception)
+            {
+                _rconClient?.Dispose();
+                _rconClient = null;
+                return null;
+            }
         }
     }
 }

@@ -11,28 +11,39 @@
         <Border Background="{StaticResource SurfaceBrush}" CornerRadius="8" Margin="8" Padding="16">
             <StackPanel>
                 <TextBlock Text="Servidor" Foreground="{StaticResource TextSecondaryBrush}" FontSize="14"/>
-                <TextBlock Text="Offline" Foreground="{StaticResource DangerBrush}" FontSize="24" FontWeight="Bold" Margin="0,8,0,0"/>
+                <TextBlock Text="{Binding StatusText}" FontSize="24" FontWeight="Bold" Margin="0,8,0,0">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Foreground" Value="{StaticResource DangerBrush}"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding StatusText}" Value="En línea">
+                                    <Setter Property="Foreground" Value="{StaticResource SuccessBrush}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
             </StackPanel>
         </Border>
 
         <Border Background="{StaticResource SurfaceBrush}" CornerRadius="8" Margin="8" Padding="16">
             <StackPanel>
                 <TextBlock Text="Mapa" Foreground="{StaticResource TextSecondaryBrush}" FontSize="14"/>
-                <TextBlock Text="No seleccionado" Foreground="{StaticResource TextPrimaryBrush}" FontSize="20" FontWeight="Bold" Margin="0,8,0,0"/>
+                <TextBlock Text="{Binding MapText}" Foreground="{StaticResource TextPrimaryBrush}" FontSize="20" FontWeight="Bold" Margin="0,8,0,0"/>
             </StackPanel>
         </Border>
 
         <Border Background="{StaticResource SurfaceBrush}" CornerRadius="8" Margin="8" Padding="16">
             <StackPanel>
                 <TextBlock Text="Mods" Foreground="{StaticResource TextSecondaryBrush}" FontSize="14"/>
-                <TextBlock Text="0" Foreground="{StaticResource TextPrimaryBrush}" FontSize="24" FontWeight="Bold" Margin="0,8,0,0"/>
+                <TextBlock Text="{Binding ModsCountText}" Foreground="{StaticResource TextPrimaryBrush}" FontSize="24" FontWeight="Bold" Margin="0,8,0,0"/>
             </StackPanel>
         </Border>
 
         <Border Background="{StaticResource SurfaceBrush}" CornerRadius="8" Margin="8" Padding="16">
             <StackPanel>
                 <TextBlock Text="Jugadores" Foreground="{StaticResource TextSecondaryBrush}" FontSize="14"/>
-                <TextBlock Text="0 / 0" Foreground="{StaticResource TextPrimaryBrush}" FontSize="24" FontWeight="Bold" Margin="0,8,0,0"/>
+                <TextBlock Text="{Binding PlayersText}" Foreground="{StaticResource TextPrimaryBrush}" FontSize="24" FontWeight="Bold" Margin="0,8,0,0"/>
             </StackPanel>
         </Border>
 
