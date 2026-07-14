@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lJEyhXSdt/U=",
+  "dgSpecHash": "NaOxjAffThA=",
   "success": true,
   "projectFilePath": "C:\\PROYECTOS\\ARKFORGE\\ArkForge\\ArkForge.Common\\ArkForge.Common.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\isaac\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.2\\communitytoolkit.mvvm.8.4.2.nupkg.sha512"
+  ],
   "logs": []
 }

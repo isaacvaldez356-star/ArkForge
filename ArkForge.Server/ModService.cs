@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics;
 using ArkForge.Common.Models;
+using System.Net.Http;
+using System.Text.Json;
 
 namespace ArkForge.Server
 {
@@ -73,7 +75,6 @@ namespace ArkForge.Server
 
             await Task.Run(() => CopyDirectory(sourcePath, destinationPath));
 
-            // El archivo .mod debe quedar al mismo nivel que la carpeta, no adentro
             var modFileSource = Path.Combine(sourcePath, $"{workshopId}.mod");
             var modFileDestination = Path.Combine(modsFolder, $"{workshopId}.mod");
 
@@ -104,6 +105,43 @@ namespace ArkForge.Server
             {
                 var destSubDir = Path.Combine(destinationDir, Path.GetFileName(dir));
                 CopyDirectory(dir, destSubDir);
+            }
+        }
+
+        public async Task<string> GetModNameAsync(string workshopId)
+        {
+            try
+            {
+                using var httpClient = new HttpClient();
+
+                var content = new FormUrlEncodedContent(new Dictionary<string, string>
+                {
+                    ["itemcount"] = "1",
+                    ["publishedfileids[0]"] = workshopId
+                });
+
+                var response = await httpClient.PostAsync(
+                    "https://api.steampowered.com/ISteamRemoteStorage/GetPublishedFileDetails/v1/",
+                    content);
+
+                var json = await response.Content.ReadAsStringAsync();
+
+                using var doc = JsonDocument.Parse(json);
+                var details = doc.RootElement
+                    .GetProperty("response")
+                    .GetProperty("publishedfiledetails")[0];
+
+                if (details.TryGetProperty("title", out var titleElement))
+                {
+                    var title = titleElement.GetString();
+                    return string.IsNullOrWhiteSpace(title) ? $"Mod {workshopId}" : title;
+                }
+
+                return $"Mod {workshopId}";
+            }
+            catch
+            {
+                return $"Mod {workshopId}";
             }
         }
     }

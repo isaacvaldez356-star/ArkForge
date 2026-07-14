@@ -438,6 +438,9 @@
         }
       },
       "ArkForge.Common/1.0.0": {
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.2"
+        },
         "runtime": {
           "ArkForge.Common.dll": {
             "assemblyVersion": "1.0.0.0",

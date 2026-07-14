@@ -22,3 +22,4 @@ C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Common\obj\Debug\net10.0\ArkForge.Common
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Common\obj\Debug\net10.0\refint\ArkForge.Common.dll
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Common\obj\Debug\net10.0\ArkForge.Common.pdb
 C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Common\obj\Debug\net10.0\ref\ArkForge.Common.dll
+C:\PROYECTOS\ARKFORGE\ArkForge\ArkForge.Common\obj\Debug\net10.0\ArkForge.Common.csproj.AssemblyReference.cache

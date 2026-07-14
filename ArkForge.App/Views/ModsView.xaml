@@ -28,9 +28,26 @@
                       Background="{StaticResource SurfaceBrush}" Foreground="White" BorderThickness="0"
                       ToolTip="Pega aquí el ID de Steam Workshop del mod"/>
 
-            <Button Grid.Column="1" Content="Agregar mod" Command="{Binding AddModCommand}" 
-                    Margin="10,0,0,0" Padding="15,8"
-                    Background="{StaticResource PrimaryBrush}" Foreground="White" BorderThickness="0"/>
+            <Grid Grid.Row="1" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox Grid.Column="0" Text="{Binding NewModId, UpdateSourceTrigger=PropertyChanged}" 
+              Padding="10" 
+              Background="{StaticResource SurfaceBrush}" Foreground="White" BorderThickness="0"
+              ToolTip="Pega aquí el ID de Steam Workshop del mod"/>
+
+                <Button Grid.Column="1" Content="Agregar mod" Command="{Binding AddModCommand}" 
+            Margin="10,0,0,0" Padding="15,8"
+            Background="{StaticResource PrimaryBrush}" Foreground="White" BorderThickness="0"/>
+
+                <Button Grid.Column="2" Content="Actualizar nombres" Command="{Binding RefreshModNamesCommand}" 
+            Margin="10,0,0,0" Padding="15,8"
+            Background="{StaticResource SecondaryBrush}" Foreground="White" BorderThickness="0"/>
+            </Grid>
         </Grid>
 
         <TextBlock Grid.Row="2" Text="{Binding StatusMessage}" 
@@ -53,10 +70,8 @@
                             </StackPanel>
 
                             <CheckBox Grid.Column="1" IsChecked="{Binding IsEnabled}" 
-                                      Content="Activo" Foreground="{StaticResource TextPrimaryBrush}"
-                                      VerticalAlignment="Center" Margin="0,0,15,0"
-                                      Command="{Binding DataContext.ToggleModCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
-                                      CommandParameter="{Binding}"/>
+                             Content="Activo" Foreground="{StaticResource TextPrimaryBrush}"
+                             VerticalAlignment="Center" Margin="0,0,15,0"/>
 
                             <Button Grid.Column="2" Content="Quitar" 
                                     Command="{Binding DataContext.RemoveModCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"

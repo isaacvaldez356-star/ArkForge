@@ -1,9 +1,16 @@
-﻿namespace ArkForge.Common.Models
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace ArkForge.Common.Models
 {
-    public class ModInfo
+    public partial class ModInfo : ObservableObject
     {
-        public string WorkshopId { get; set; } = string.Empty;
-        public string Name { get; set; } = string.Empty;
-        public bool IsEnabled { get; set; } = true;
+        [ObservableProperty]
+        private string workshopId = string.Empty;
+
+        [ObservableProperty]
+        private string name = string.Empty;
+
+        [ObservableProperty]
+        private bool isEnabled = true;
     }
 }

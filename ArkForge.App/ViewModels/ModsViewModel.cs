@@ -1,8 +1,9 @@
-﻿using System.Collections.ObjectModel;
+﻿using ArkForge.Common.Models;
+using ArkForge.Configuration;
+using ArkForge.Server;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using ArkForge.Common.Models;
-using ArkForge.Configuration;
+using System.Collections.ObjectModel;
 
 namespace ArkForge.App.ViewModels
 {
@@ -19,17 +20,23 @@ namespace ArkForge.App.ViewModels
         [ObservableProperty]
         private string statusMessage = string.Empty;
 
+        private readonly ModService _modService;
+
         public ModsViewModel(ServerConfig config, ConfigService configService)
         {
             _config = config;
             _configService = configService;
+            _modService = new ModService(config);
 
             foreach (var mod in _config.Mods)
+            {
                 Mods.Add(mod);
+                mod.PropertyChanged += (s, e) => _configService.Save(_config);
+            }
         }
 
         [RelayCommand]
-        private void AddMod()
+        private async Task AddMod()
         {
             if (string.IsNullOrWhiteSpace(NewModId))
                 return;
@@ -49,12 +56,43 @@ namespace ArkForge.App.ViewModels
                 return;
             }
 
-            var newMod = new ModInfo { WorkshopId = id, Name = $"Mod {id}", IsEnabled = true };
+            StatusMessage = "Buscando nombre del mod...";
+
+            var modName = await _modService.GetModNameAsync(id);
+
+            var newMod = new ModInfo { WorkshopId = id, Name = modName, IsEnabled = true };
             Mods.Add(newMod);
+            newMod.PropertyChanged += (s, e) => _configService.Save(_config);
             _config.Mods.Add(newMod);
             _configService.Save(_config);
 
-            StatusMessage = $"Mod {id} agregado. Se descargará automáticamente al iniciar el servidor.";
+            StatusMessage = $"\"{modName}\" agregado. Se descargará automáticamente al iniciar el servidor.";
+        }
+
+        [ObservableProperty]
+        private bool isRefreshingNames;
+
+        [RelayCommand]
+        private async Task RefreshModNames()
+        {
+            IsRefreshingNames = true;
+            StatusMessage = "Actualizando nombres...";
+
+            foreach (var mod in Mods)
+            {
+                var newName = await _modService.GetModNameAsync(mod.WorkshopId);
+                mod.Name = newName;
+            }
+
+            // Forzamos que la lista se refresque visualmente
+            var temp = Mods.ToList();
+            Mods.Clear();
+            foreach (var mod in temp)
+                Mods.Add(mod);
+
+            _configService.Save(_config);
+            IsRefreshingNames = false;
+            StatusMessage = "Nombres actualizados.";
         }
 
         [RelayCommand]
@@ -65,11 +103,6 @@ namespace ArkForge.App.ViewModels
             _configService.Save(_config);
         }
 
-        [RelayCommand]
-        private void ToggleMod(ModInfo mod)
-        {
-            mod.IsEnabled = !mod.IsEnabled;
-            _configService.Save(_config);
-        }
+        
     }
 }
