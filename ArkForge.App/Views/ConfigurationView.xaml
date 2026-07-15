@@ -6,104 +6,285 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <StackPanel Margin="20">
+    <UserControl.Resources>
+        <Style TargetType="TabItem">
+            <Setter Property="Padding" Value="16,8"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TabItem">
+                        <Border Name="Border" Background="{StaticResource SurfaceBrush}" Margin="0,0,4,0" Padding="{TemplateBinding Padding}" CornerRadius="6,6,0,0">
+                            <ContentPresenter ContentSource="Header" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="{StaticResource PrimaryBrush}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
 
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
-                <TextBlock Text="Configuración" FontSize="24" FontWeight="Bold" 
-                           Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"/>
+        <Style x:Key="SliderLabel" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource TextSecondaryBrush}"/>
+            <Setter Property="Margin" Value="0,0,0,2"/>
+        </Style>
 
-                <Button Content="Guardar" Command="{Binding SaveCommand}" 
-                        Margin="20,0,0,0" Padding="20,8"
-                        Background="{StaticResource PrimaryBrush}" Foreground="White" BorderThickness="0"/>
+        <Style x:Key="FieldPanel" TargetType="StackPanel">
+            <Setter Property="Margin" Value="0,0,10,15"/>
+        </Style>
+    </UserControl.Resources>
 
-                <Button Content="Aplicar perfil Ultimate Annunaki" Command="{Binding ApplyAnnunakiProfileCommand}" 
-        Margin="10,0,0,0" Padding="20,8"
-        Background="{StaticResource SecondaryBrush}" Foreground="White" BorderThickness="0"/>
-            </StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-            <TextBlock Text="{Binding StatusMessage}" Foreground="{StaticResource SuccessBrush}" Margin="0,0,0,20"/>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20,20,20,10">
+            <TextBlock Text="Configuración" FontSize="24" FontWeight="Bold" 
+                       Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"/>
 
-            <TextBlock Text="Multiplicadores" FontSize="18" FontWeight="Bold" 
-                       Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,10"/>
+            <Button Content="Guardar" Command="{Binding SaveCommand}" 
+                    Margin="20,0,0,0" Padding="20,8"
+                    Background="{StaticResource PrimaryBrush}" Foreground="White" BorderThickness="0"/>
 
-            <Grid Margin="0,0,0,20">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-
-                <StackPanel Grid.Row="0" Grid.Column="0" Margin="0,0,10,15">
-                    <TextBlock Text="{Binding XpMultiplier, StringFormat='Experiencia (XP): {0:0.0}x'}" Foreground="{StaticResource TextSecondaryBrush}"/>
-                    <Slider Value="{Binding XpMultiplier}" Minimum="0.1" Maximum="20" TickFrequency="0.1"/>
-                </StackPanel>
-
-                <StackPanel Grid.Row="0" Grid.Column="1" Margin="10,0,0,15">
-                    <TextBlock Text="{Binding TamingSpeedMultiplier, StringFormat='Velocidad de tameo: {0:0.0}x'}" Foreground="{StaticResource TextSecondaryBrush}"/>
-                    <Slider Value="{Binding TamingSpeedMultiplier}" Minimum="0.1" Maximum="20" TickFrequency="0.1"/>
-                </StackPanel>
-
-                <StackPanel Grid.Row="1" Grid.Column="0" Margin="0,0,10,15">
-                    <TextBlock Text="{Binding HarvestAmountMultiplier, StringFormat='Recolección de recursos: {0:0.0}x'}" Foreground="{StaticResource TextSecondaryBrush}"/>
-                    <Slider Value="{Binding HarvestAmountMultiplier}" Minimum="0.1" Maximum="20" TickFrequency="0.1"/>
-                </StackPanel>
-
-                <StackPanel Grid.Row="1" Grid.Column="1" Margin="10,0,0,15">
-                    <TextBlock Text="{Binding MatingIntervalMultiplier, StringFormat='Intervalo de apareamiento: {0:0.0}x'}" Foreground="{StaticResource TextSecondaryBrush}"/>
-                    <Slider Value="{Binding MatingIntervalMultiplier}" Minimum="0.1" Maximum="5" TickFrequency="0.1"/>
-                </StackPanel>
-
-                <StackPanel Grid.Row="2" Grid.Column="0" Margin="0,0,10,15">
-                    <TextBlock Text="{Binding BabyMatureSpeedMultiplier, StringFormat='Velocidad de crecimiento: {0:0.0}x'}" Foreground="{StaticResource TextSecondaryBrush}"/>
-                    <Slider Value="{Binding BabyMatureSpeedMultiplier}" Minimum="0.1" Maximum="20" TickFrequency="0.1"/>
-                </StackPanel>
-
-                <StackPanel Grid.Row="2" Grid.Column="1" Margin="10,0,0,15">
-                    <TextBlock Text="{Binding PlayerDamageMultiplier, StringFormat='Daño del jugador: {0:0.0}x'}" Foreground="{StaticResource TextSecondaryBrush}"/>
-                    <Slider Value="{Binding PlayerDamageMultiplier}" Minimum="0.1" Maximum="10" TickFrequency="0.1"/>
-                </StackPanel>
-
-                <StackPanel Grid.Row="3" Grid.Column="0" Margin="0,0,10,15">
-                    <TextBlock Text="{Binding DinoDamageMultiplier, StringFormat='Daño de dinosaurios: {0:0.0}x'}" Foreground="{StaticResource TextSecondaryBrush}"/>
-                    <Slider Value="{Binding DinoDamageMultiplier}" Minimum="0.1" Maximum="10" TickFrequency="0.1"/>
-                </StackPanel>
-
-                <StackPanel Grid.Row="3" Grid.Column="1" Margin="10,0,0,15">
-                    <TextBlock Text="{Binding StructureDamageMultiplier, StringFormat='Daño a estructuras: {0:0.0}x'}" Foreground="{StaticResource TextSecondaryBrush}"/>
-                    <Slider Value="{Binding StructureDamageMultiplier}" Minimum="0.1" Maximum="10" TickFrequency="0.1"/>
-                </StackPanel>
-
-                <StackPanel Grid.Row="4" Grid.Column="0" Margin="0,0,10,15">
-                    <TextBlock Text="{Binding PlayerResistanceMultiplier, StringFormat='Resistencia del jugador: {0:0.0}x'}" Foreground="{StaticResource TextSecondaryBrush}"/>
-                    <Slider Value="{Binding PlayerResistanceMultiplier}" Minimum="0.1" Maximum="10" TickFrequency="0.1"/>
-                </StackPanel>
-
-                <StackPanel Grid.Row="4" Grid.Column="1" Margin="10,0,0,15">
-                    <TextBlock Text="{Binding DinoResistanceMultiplier, StringFormat='Resistencia de dinosaurios: {0:0.0}x'}" Foreground="{StaticResource TextSecondaryBrush}"/>
-                    <Slider Value="{Binding DinoResistanceMultiplier}" Minimum="0.1" Maximum="10" TickFrequency="0.1"/>
-                </StackPanel>
-
-            </Grid>
-
-            <TextBlock Text="Opciones generales" FontSize="18" FontWeight="Bold" 
-                       Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,10"/>
-
-            <CheckBox Content="Permitir cámara en tercera persona" IsChecked="{Binding AllowThirdPersonPlayer}" 
-                      Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,10"/>
-
-            <CheckBox Content="Mostrar ubicación del jugador en el mapa" IsChecked="{Binding ShowMapPlayerLocation}" 
-                      Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,10"/>
-
-            <CheckBox Content="Modo PvE (sin combate entre jugadores)" IsChecked="{Binding EnablePvE}" 
-                      Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,10"/>
-
+            <Button Content="Aplicar perfil Ultimate Annunaki" Command="{Binding ApplyAnnunakiProfileCommand}" 
+                    Margin="10,0,0,0" Padding="20,8"
+                    Background="{StaticResource SecondaryBrush}" Foreground="White" BorderThickness="0"/>
         </StackPanel>
-    </ScrollViewer>
+
+        <TextBlock Grid.Row="1" Text="{Binding StatusMessage}" 
+                   Foreground="{StaticResource SuccessBrush}" Margin="20,0,20,10"/>
+
+        <TabControl Grid.Row="2" Background="Transparent" BorderThickness="0" Margin="20,0,20,20">
+
+            <!-- GENERAL -->
+            <TabItem Header="General">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="0,15,0,0">
+
+                        <StackPanel Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="Nombre del servidor" Style="{StaticResource SliderLabel}"/>
+                            <TextBox Text="{Binding ServerName, UpdateSourceTrigger=PropertyChanged}" 
+                                     Padding="8" Background="{StaticResource SurfaceBrush}" Foreground="White" BorderThickness="0"/>
+                        </StackPanel>
+
+                        <StackPanel Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="Contraseña del servidor (vacío = sin contraseña)" Style="{StaticResource SliderLabel}"/>
+                            <TextBox Text="{Binding ServerPassword, UpdateSourceTrigger=PropertyChanged}" 
+                                     Padding="8" Background="{StaticResource SurfaceBrush}" Foreground="White" BorderThickness="0"/>
+                        </StackPanel>
+
+                        <CheckBox Content="Modo PvE (sin combate entre jugadores)" IsChecked="{Binding EnablePvE}" 
+                                  Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,10"/>
+
+                        <CheckBox Content="Modo Hardcore (respawn en nivel 1 al morir)" IsChecked="{Binding ServerHardcore}" 
+                                  Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,10"/>
+
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <!-- MULTIPLICADORES -->
+            <TabItem Header="Multiplicadores">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <Grid Margin="0,15,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="0" Grid.Column="0" Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding XpMultiplier, StringFormat='Experiencia (XP): {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding XpMultiplier}" Minimum="0.1" Maximum="20" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="0" Grid.Column="1" Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding TamingSpeedMultiplier, StringFormat='Velocidad de tameo: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding TamingSpeedMultiplier}" Minimum="0.1" Maximum="20" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="1" Grid.Column="0" Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding HarvestAmountMultiplier, StringFormat='Recolección de recursos: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding HarvestAmountMultiplier}" Minimum="0.1" Maximum="20" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="1" Grid.Column="1" Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding MatingIntervalMultiplier, StringFormat='Intervalo de apareamiento: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding MatingIntervalMultiplier}" Minimum="0.1" Maximum="5" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="2" Grid.Column="0" Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding BabyMatureSpeedMultiplier, StringFormat='Velocidad de crecimiento: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding BabyMatureSpeedMultiplier}" Minimum="0.1" Maximum="20" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="2" Grid.Column="1" Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding PlayerDamageMultiplier, StringFormat='Daño del jugador: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding PlayerDamageMultiplier}" Minimum="0.1" Maximum="10" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="3" Grid.Column="0" Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding DinoDamageMultiplier, StringFormat='Daño de dinosaurios: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding DinoDamageMultiplier}" Minimum="0.1" Maximum="10" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="3" Grid.Column="1" Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding StructureDamageMultiplier, StringFormat='Daño a estructuras: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding StructureDamageMultiplier}" Minimum="0.1" Maximum="10" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="4" Grid.Column="0" Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding PlayerResistanceMultiplier, StringFormat='Resistencia del jugador: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding PlayerResistanceMultiplier}" Minimum="0.1" Maximum="10" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="4" Grid.Column="1" Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding DinoResistanceMultiplier, StringFormat='Resistencia de dinosaurios: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding DinoResistanceMultiplier}" Minimum="0.1" Maximum="10" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                    </Grid>
+                </ScrollViewer>
+            </TabItem>
+
+            <!-- DIFICULTAD -->
+            <TabItem Header="Dificultad">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="0,15,0,0">
+
+                        <StackPanel Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding DifficultyOffset, StringFormat='Dificultad (rango de niveles): {0:0.00}'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding DifficultyOffset}" Minimum="0.1" Maximum="1" TickFrequency="0.05"/>
+                        </StackPanel>
+
+                        <StackPanel Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding OverrideOfficialDifficulty, StringFormat='Nivel máximo de dinos (x30): {0:0.0}'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding OverrideOfficialDifficulty}" Minimum="1" Maximum="20" TickFrequency="1"/>
+                        </StackPanel>
+
+                        <StackPanel Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding ItemStackSizeMultiplier, StringFormat='Tamaño de stack de items: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding ItemStackSizeMultiplier}" Minimum="1" Maximum="20" TickFrequency="1"/>
+                        </StackPanel>
+
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <!-- MUNDO E INTERFAZ -->
+            <TabItem Header="Mundo e interfaz">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="0,15,0,0">
+
+                        <StackPanel Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding DayCycleSpeedScale, StringFormat='Velocidad del ciclo día/noche: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding DayCycleSpeedScale}" Minimum="0.1" Maximum="5" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                        <StackPanel Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding DayTimeSpeedScale, StringFormat='Velocidad del día: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding DayTimeSpeedScale}" Minimum="0.1" Maximum="5" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                        <StackPanel Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding NightTimeSpeedScale, StringFormat='Velocidad de la noche: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding NightTimeSpeedScale}" Minimum="0.1" Maximum="5" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                        <StackPanel Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding PlayerCharacterStaminaDrainMultiplier, StringFormat='Drenaje de estamina: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding PlayerCharacterStaminaDrainMultiplier}" Minimum="0.1" Maximum="5" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                        <StackPanel Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding PlayerCharacterFoodDrainMultiplier, StringFormat='Drenaje de hambre: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding PlayerCharacterFoodDrainMultiplier}" Minimum="0.1" Maximum="5" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                        <StackPanel Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding PlayerCharacterWaterDrainMultiplier, StringFormat='Drenaje de sed: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding PlayerCharacterWaterDrainMultiplier}" Minimum="0.1" Maximum="5" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                        <StackPanel Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding DinoCharacterFoodDrainMultiplier, StringFormat='Drenaje de hambre de dinos: {0:0.0}x'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding DinoCharacterFoodDrainMultiplier}" Minimum="0.1" Maximum="5" TickFrequency="0.1"/>
+                        </StackPanel>
+
+                        <CheckBox Content="Permitir cámara en tercera persona" IsChecked="{Binding AllowThirdPersonPlayer}" 
+                                  Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,10"/>
+
+                        <CheckBox Content="Mostrar ubicación del jugador en el mapa" IsChecked="{Binding ShowMapPlayerLocation}" 
+                                  Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,10"/>
+
+                        <CheckBox Content="Mostrar mira (crosshair)" IsChecked="{Binding ServerCrosshair}" 
+                                  Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,10"/>
+
+                        <CheckBox Content="Notificar cuando un jugador se conecta" IsChecked="{Binding AlwaysNotifyPlayerJoined}" 
+                                  Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,10"/>
+
+                        <CheckBox Content="Notificar cuando un jugador se desconecta" IsChecked="{Binding AlwaysNotifyPlayerLeft}" 
+                                  Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,10"/>
+
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <!-- ESTRUCTURAS -->
+            <TabItem Header="Estructuras">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="0,15,0,0">
+
+                        <CheckBox Content="Desactivar decaimiento de estructuras" IsChecked="{Binding DisableStructureDecay}" 
+                                  Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,15"/>
+
+                        <StackPanel Style="{StaticResource FieldPanel}">
+                            <TextBlock Text="{Binding MaxStructuresInRange, StringFormat='Máximo de estructuras en rango: {0:0}'}" Style="{StaticResource SliderLabel}"/>
+                            <Slider Value="{Binding MaxStructuresInRange}" Minimum="1000" Maximum="20000" TickFrequency="500"/>
+                        </StackPanel>
+
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <!-- AVANZADO -->
+            <TabItem Header="Avanzado">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="0,15,0,0">
+
+                        <TextBlock Text="Escribe cualquier configuración adicional de ARK en formato Clave=Valor, una por línea. Esto cubre cualquier opción que no esté disponible arriba." 
+                                   Foreground="{StaticResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,0,0,15"/>
+
+                        <TextBlock Text="GameUserSettings.ini (sección [ServerSettings])" Style="{StaticResource SliderLabel}"/>
+                        <TextBox Text="{Binding AdvancedGameUserSettings, UpdateSourceTrigger=PropertyChanged}" 
+                                 AcceptsReturn="True" TextWrapping="Wrap" Height="120" 
+                                 Padding="10" FontFamily="Consolas"
+                                 Background="{StaticResource SurfaceBrush}" Foreground="White" BorderThickness="0"
+                                 VerticalScrollBarVisibility="Auto" Margin="0,0,0,20"/>
+
+                        <TextBlock Text="Game.ini (sección [/script/shootergame.shootergamemode])" Style="{StaticResource SliderLabel}"/>
+                        <TextBox Text="{Binding AdvancedGameIni, UpdateSourceTrigger=PropertyChanged}" 
+                                 AcceptsReturn="True" TextWrapping="Wrap" Height="120" 
+                                 Padding="10" FontFamily="Consolas"
+                                 Background="{StaticResource SurfaceBrush}" Foreground="White" BorderThickness="0"
+                                 VerticalScrollBarVisibility="Auto"/>
+
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+        </TabControl>
+    </Grid>
 </UserControl>
